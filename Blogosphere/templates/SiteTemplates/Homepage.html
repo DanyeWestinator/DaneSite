@@ -1,0 +1,101 @@
+
+<head>
+    <style type="text/css">
+        STYLE
+   </style>
+
+	<style>
+    .blogHeader
+    {
+    	background-color : cornflowerblue;
+        text-align : center;
+        font-size : 300%;
+        width: 100%;
+        margin: 0 auto;
+        body { overflow-x:hidden;  }
+    }
+    </style>
+    <style>
+    .blogSubHeader
+    {
+    	background-color : cornflowerblue;
+        text-align : center;
+        font-size : 150%;
+        width: 100%;
+        margin: 0 auto;
+        body { overflow-x:hidden;  }
+    }
+    </style>
+    <style>
+    .blogBody
+    {
+    	background-color : darkcyan;
+        color : white;
+        margin: 0 -500%;
+		padding: 0 500% !important;
+        text-align : left
+    }
+    </style>
+    <style>
+    .bodyHeader
+    {
+    	background-color : darkcyan;
+        color : white;
+        font-size : 200%;
+        text-indent : 20%;
+        margin: 0 -500%;
+		padding: 0 500% !important;
+        text-align : left;
+    }
+    </style>
+
+
+</head>
+<body style="background-color: cornflowerblue;">
+
+<!--Header here -->
+<div class = "blogHeader">
+	<span>danecarstens.net</span>
+    <br />
+    {% load static %}
+    <span><img src="{% static 'Blogosphere/images/DaneTractor.jpg' %} " width="187.5" height="250" /></span>
+     <br />
+
+
+
+</div>
+<div class = "blogSubHeader">
+    <br/>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1mIbcvGdeoXyR552D1Elfzkwl6ujLNDHN&ehbc=2E312F" width="640" height="480"></iframe>
+
+</div>
+
+</body>
+<body style="background-color: darkcyan;">
+
+<!--Header here -->
+<div class = "bodyHeader">
+
+
+</div>
+<div class = "blogBody">
+<br/><span><a href="Blogosphere">Blogosphere</a></span>
+    <p style="text-align: center ; color : white">
+        {{DATE}}
+        <br/>
+        {{NUM_WORDS}} words
+    </p><br/>
+    TEXT_HTML
+
+    <br /><br />
+    <a href={{ID}}>Continue reading...</a><br />
+    <p style="text-align: center ; color : white">
+        ENTRIES:
+    </p><br />
+    LINES
+</div>
+<br />
+<br />
+<a href="admin">Admin Login</a>
+
+</body>

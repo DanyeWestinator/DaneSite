@@ -1,0 +1,106 @@
+<!-- Welcome to a generic Blogosphere entry
+<p>&nbsp;</p>
+<center>
+<body style="background-color: cornflowerblue;">
+<h1 style="background-color: cornflowerblue;">Blogosphere!<br />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" width="100" height="100" /> <br />
+    <span style="font-size: medium;">Posts: TOTAL_POSTS <br />Total words: TOTAL_WORDS</span>
+</center>
+<p>&nbsp;</p>
+</h1>
+<h2 style="background-color: darkcyan; color: white;" font-size = +30><center><i>Title Here!</i></center>
+<br>
+<center><font size="-1">FORMATTED DATE
+<br>WORD_COUNT</font></center>
+<br><br>The main body here!
+-->
+
+
+<!-- Welcome to a generic Blogosphere entry-->
+<html xmlns:text-align="http://www.w3.org/1999/xhtml">
+<head>
+    <style type="text/css">
+        .c0{padding-top:0pt;text-indent:36pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left;height:11pt}.c4{padding-top:18pt;text-indent:36pt;padding-bottom:6pt;line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.c2{padding-top:0pt;text-indent:36pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c8{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left;height:11pt}.c3{color:white;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c9{color:white;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Arial"}.c6{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;color:#1155cc;text-decoration:underline}.c5{background-color:white;max-width:468pt;padding:72pt 72pt 72pt 72pt}.c1{color:white;text-decoration:inherit}.c7{font-style:italic}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:white;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}{paddh1ing-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:white;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:0pt;color:white;font-size:11pt;padding-bottom:0pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:0pt;-webkit-text-decoration-skip:none;color:#000000;text-decoration:underline;font-size:14pt;padding-bottom:0pt;line-height:1.15;page-break-after:avoid;text-decoration-skip-ink:none;font-family:"Arial";orphans:2;widows:2;text-align:center}h6{padding-top:12pt;color: white;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}
+    </style>
+	<style>
+    .blogHeader
+    {
+    	background-color : cornflowerblue;
+        text-align : center;
+        font-size : 300%;
+        width: 100%;
+        margin: 0 auto;
+        body { overflow-x:hidden;  }
+    }
+    </style>
+    <style>
+    .blogSubHeader
+    {
+    	background-color : cornflowerblue;
+        text-align : center;
+        font-size : 150%;
+        width: 100%;
+        margin: 0 auto;
+        body { overflow-x:hidden;  }
+    }
+    </style>
+    <style>
+    .blogBody
+    {
+    	background-color : darkcyan;
+        color : white;
+        margin: 0 -500%;
+		padding: 0 500% !important;
+        text-align : left
+    }
+    </style>
+    <style>
+    .bodyHeader
+    {
+    	background-color : darkcyan;
+        color : white;
+        font-size : 200%;
+        text-indent : 20%;
+        margin: 0 -500%;
+		padding: 0 500% !important;
+        text-align : left;
+    }
+    </style>
+
+
+</head>
+<body style="background-color: cornflowerblue;">
+
+<!--Header here -->
+<div class = "blogHeader">
+	<span>Blogosphere!</span>
+    <br />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" width="100" height="100" /> <br />
+
+
+</div>
+<div class = "blogSubHeader">
+    Total Posts: TOTAL_POSTS
+    <br />Total words: TOTAL_WORDS
+</div>
+
+</body>
+<body style="background-color: darkcyan;">
+
+<!--Header here -->
+<div class = "bodyHeader">
+	<br/><span>&nbsp;&nbsp;&nbsp;&nbsp;Dear Irvine...</span>
+
+</div>
+<div class = "blogBody">
+
+    <p style="text-align: center ; color : white">
+    FORMATTED_DATE
+        <br/>
+        NUM_WORDS words
+    </p>
+    <br/><br/>
+    TEXT_HTML
+</div>
+
+</body>
