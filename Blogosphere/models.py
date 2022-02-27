@@ -14,14 +14,14 @@ class BlogEntry(models.Model):
     style = ""
 
     def save(self, *args, **kwargs):
-        print("Save logic here!")
+        #print("Save logic here!")
         self.pub_date = date.today()
 
         if str(self.docs_url).startswith("https://docs.google.com/document/d/"):
             self.docs_url = str(self.docs_url).replace("https://docs.google.com/document/d/", "")
         url_split = [i for i in str(self.docs_url).split("/") if i.__contains__("edit") == False]
         url = url_split[0]
-        print(url)
+        #print(url)
         GDS.download_google_doc(url)
         parsed = GDS.parse_blog()
         self.docs_url = url

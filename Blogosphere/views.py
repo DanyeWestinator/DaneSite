@@ -99,7 +99,7 @@ def get_total_words():
         if e == None:
             break
 
-        print(e)
+        #print(e)
         if (e.num_words == None):
             #intentionally pointless ;)
             total_words += 0

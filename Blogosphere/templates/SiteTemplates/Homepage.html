@@ -1,18 +1,54 @@
 
 <head>
+    <script>
+        var target = document.getElementById("BlogDescription");
+        var blogToggle = document.getElementById("blogToggleLabel");
+    function btnToggle() {
+        const blogLong = "There were enough times that I yelled at my hometown paper, the wonderful Visalia Times Delta,\
+          about the absolute insanity in the world of politics today. I started this blog project\
+          as a long form ranting project, shooting for a weekly release schedule of roughly 1000 words per entry."
+        if (!target || !blogToggle)
+        {
+            target = document.getElementById("BlogDescription");
+            blogToggle = document.getElementById("blogToggleLabel");
+
+        }
+        if (target.innerHTML != " ")
+        {
+            target.innerHTML = " ";
+            blogToggle.innerHTML = "Read more...";
+        }
+        else
+        {
+            target.innerHTML = blogLong;
+            blogToggle.innerHTML = "Collapse...";
+        }
+        function toggle(descriptionLabel, toggleLabel)
+        {
+
+        }
+    }
+    </script>
     <style type="text/css">
         STYLE
    </style>
-
+    <style>
+    body
+    {
+        overflow-x:hidden;
+        max-width: 100%;
+        overflow-y: scroll;
+        zoom : 200%;
+    }
+    </style>
 	<style>
     .blogHeader
     {
     	background-color : cornflowerblue;
         text-align : center;
         font-size : 300%;
-        width: 100%;
         margin: 0 auto;
-        body { overflow-x:hidden;  }
+
     }
     </style>
     <style>
@@ -21,9 +57,7 @@
     	background-color : cornflowerblue;
         text-align : center;
         font-size : 150%;
-        width: 100%;
         margin: 0 auto;
-        body { overflow-x:hidden;  }
     }
     </style>
     <style>
@@ -33,7 +67,7 @@
         color : white;
         margin: 0 -500%;
 		padding: 0 500% !important;
-        text-align : left
+        text-align : left;
     }
     </style>
     <style>
@@ -50,6 +84,7 @@
     </style>
 
 
+
 </head>
 <body style="background-color: cornflowerblue;">
 
@@ -63,10 +98,29 @@
 
 
 
+
 </div>
 <div class = "blogSubHeader">
     <br/>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1mIbcvGdeoXyR552D1Elfzkwl6ujLNDHN&ehbc=2E312F" width="640" height="480"></iframe>
+    Author, Game Designer, Nature Nerd
+    <p style="font-size: 65%">
+        Dane is a Computer Game Science student at UCI.
+        <br/>He spends his days reading and writing SciFi/Fantasy,
+        <br/>
+        working on indie games,
+        <br/>ranting about why the US needs better public transit,
+        <br/>and camping across the National
+        Park System
+
+        <br />
+        <br />
+        Social links: <br />
+
+        <a href="https://www.instagram.com/danyewest/">Instagram</a>
+        <br />
+        <a href="https://twitter.com/CarstensDane">Twitter</a>
+    </p>
+
 
 </div>
 
@@ -79,20 +133,23 @@
 
 </div>
 <div class = "blogBody">
-<br/><span><a href="Blogosphere">Blogosphere</a></span>
-    <p style="text-align: center ; color : white">
-        {{DATE}}
-        <br/>
-        {{NUM_WORDS}} words
-    </p><br/>
-    TEXT_HTML
+    <p style="text-align: center ; color : white ; font-size : 200% ">
+       <br/>
+        Current Projects:
 
-    <br /><br />
-    <a href={{ID}}>Continue reading...</a><br />
-    <p style="text-align: center ; color : white">
-        ENTRIES:
-    </p><br />
-    LINES
+    </p>
+    <br/>
+        &emsp;&emsp;
+    <span><a href="Blogosphere">Blogosphere</a></span>, a political, meandering ranting blog
+    <button type = "button" onclick="btnToggle()" id = "blogToggleLabel">Read more...</button>
+    <br/>
+    <span id = "BlogDescription"> </span>
+    <br/>
+    &emsp;&emsp; The Scorching Ray, a fantasy novel
+    <br/>
+    <p align="center"><iframe src="https://www.google.com/maps/d/embed?mid=1mIbcvGdeoXyR552D1Elfzkwl6ujLNDHN&ehbc=2E312F" width="640" height="480" ></iframe></p>
+
+
 </div>
 <br />
 <br />
