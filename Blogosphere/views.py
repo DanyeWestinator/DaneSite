@@ -8,7 +8,7 @@ from django.http import Http404
 import re
 
 def Homepage(request):
-    template = loader.get_template("SiteTemplates/Homepage.html")
+    template = loader.get_template("SiteTemplates/Homepage02.html")
 
     context = {
         #put plain text replacements here
