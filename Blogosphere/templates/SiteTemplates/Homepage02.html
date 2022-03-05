@@ -1,0 +1,118 @@
+<!--The main homepage of the website
+ Includes all portfolio links -->
+
+<head>
+    <!--The main style of the body -->
+    <style id = "BodyStyle">
+        body
+        {
+            background-color: darkcyan;
+            color: white;
+            overflow-x:hidden;
+            max-width: 100%;
+            overflow-y: scroll;
+            zoom : 200%;
+        }
+    </style>
+    <style type="text/css">
+        STYlE
+    </style>
+    <script>
+        var longStrings = {
+            "Blogosphere" : "There were far too many times that I yelled at my hometown paper, the wonderful Visalia Times Delta,\
+          about the absolute insanity in the world of politics today. I started this blog project\
+          as a long form ranting project, shooting for a weekly release schedule of roughly 1000 words per entry.\
+          ",
+            "ScorchingRay" : "A fantasy novel, clocking in just north of 85k words,\
+                filled with all my trademark wit and sarcasm. Young Jace Carver was caught in a brutal coup\
+                that resulted in the death of the previous Emperor. Teleported into the middle of the woods, with\
+                no allies except a shape-shifting, mysterious, grouchy old being of unquestionable power, \
+                Jace must get his revenge on the Mage who did this to him."
+
+        }
+        function toggleButton(longString, buttonID, descriptionID, posLabel = "Read more...", negLabel = "Close...")
+        {
+            var button = document.getElementById(buttonID);
+            var target = document.getElementById(descriptionID);
+            if (target.innerHTML == "")
+            {
+                target.innerHTML = longStrings[longString];
+                button.innerText = negLabel;
+            }
+            else
+            {
+                button.innerText = posLabel;
+                target.innerHTML = "";
+            }
+
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+<!-- Header -->
+<div style="font-size: 400%; text-align: center; color: black">
+danecarstens.net
+<br />
+    {% load static %}
+    <span><img src="{% static 'Blogosphere/images/DaneTractor.jpg' %} " width="187.5" height="250" /></span>
+    <br />
+    <p style="font-size: 35%; color: white">
+        Author, Game Designer, Nature Nerd
+    </p>
+    <p style="font-size: 15%; color: white">
+    Dane is a Computer Game Science student at UCI.
+        <br/>He spends his days reading and writing SciFi/Fantasy,
+        <br/>
+        working on indie games,
+        <br/>ranting about why the US needs better public transit,
+        <br/>and camping across the National
+        Parks System
+
+        <br />
+        <br />
+        Social links: <br />
+
+        <a href="https://www.instagram.com/danyewest/">Instagram</a>
+        <br />
+        <a href="https://twitter.com/CarstensDane">Twitter</a>
+    </p>
+</div>
+<!-- Body -->
+<div style="text-align: center">
+    <br />
+    <span style = "font-size: 150%">
+        <u>Current Projects:</u>
+        <br />
+    </span>
+
+    <a href="Blogosphere">Blogosphere</a>, a political, meandering ranting blog
+    <button type = "button" onclick="toggleButton('Blogosphere', 'blogToggleLabel', 'blogosphereLong')"
+            id = "blogToggleLabel">Read more...</button>
+    <br />
+    <span id = "blogosphereLong"></span>
+    <br />
+    The Scorching Ray, a novel
+    <button type = "button" onclick="toggleButton('ScorchingRay', 'ScorchingButton', 'ScorchingText')"
+    id = "ScorchingButton">
+        Read more...
+    </button>
+    <br />
+    <span id = "ScorchingText"></span>
+    <br />
+
+</div>
+
+<span style="font-size: 75%">
+    <br />
+    <br />
+    For any further inquries, please email me at <a href="mailto:dcarsten@uci.edu">dcarsten@uci.edu</a>
+</span>
+
+
+
+</body>
