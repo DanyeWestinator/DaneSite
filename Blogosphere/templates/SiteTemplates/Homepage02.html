@@ -17,39 +17,7 @@
     <style type="text/css">
         STYlE
     </style>
-    <script>
-        var longStrings = {
-            "Blogosphere" : "There were far too many times that I yelled at my hometown paper, the wonderful Visalia Times Delta,\
-          about the absolute insanity in the world of politics today. I started this blog project\
-          as a long form ranting project, shooting for a weekly release schedule of roughly 1000 words per entry.\
-          ",
-            "ScorchingRay" : "A fantasy novel, clocking in just north of 85k words,\
-                filled with all my trademark wit and sarcasm. Young Jace Carver was caught in a brutal coup\
-                that resulted in the death of the previous Emperor. Teleported into the middle of the woods, with\
-                no allies except a shape-shifting, mysterious, grouchy old being of unquestionable power, \
-                Jace must get his revenge on the Mage who did this to him."
 
-        }
-        function toggleButton(longString, buttonID, descriptionID, posLabel = "Read more...", negLabel = "Close...")
-        {
-            var button = document.getElementById(buttonID);
-            var target = document.getElementById(descriptionID);
-            if (target.innerHTML == "")
-            {
-                target.innerHTML = longStrings[longString];
-                button.innerText = negLabel;
-            }
-            else
-            {
-                button.innerText = posLabel;
-                target.innerHTML = "";
-            }
-
-        }
-
-
-
-    </script>
 
 </head>
 
@@ -104,6 +72,12 @@ danecarstens.net
     <br />
     <span id = "ScorchingText"></span>
     <br />
+    The Great Outdoors, an annotated Google Map of interesting hiking spots
+    <button type = "button" onclick="toggleButton('GreatBodyText', 'GreatOutButton', 'GreatBody', 'Expand...')"
+    id = "GreatOutButton">
+        Expand...
+    </button>
+    <span id = "GreatBody"></span>
 
 </div>
 
@@ -113,6 +87,47 @@ danecarstens.net
     For any further inquries, please email me at <a href="mailto:dcarsten@uci.edu">dcarsten@uci.edu</a>
 </span>
 
+<script>
+        var longStrings = {
+            "Blogosphere" : "There were far too many times that I yelled at my hometown paper, the wonderful Visalia Times Delta,\
+          about the absolute insanity in the world of politics today. I started this blog project\
+          as a long form ranting project, shooting for a weekly release schedule of roughly 1000 words per entry.\
+          ",
+            "ScorchingRay" : "A fantasy novel, clocking in just north of 85k words,\
+                filled with all my trademark wit and sarcasm. Young Jace Carver was caught in a brutal coup\
+                that resulted in the death of the previous Emperor. Teleported into the middle of the woods, with\
+                no allies except a shape-shifting, mysterious, grouchy old being of unquestionable power, \
+                Jace must get his revenge on the Mage who did this to him.",
+            "GreatBodyText" : "<br />\n" +
+                "        <br />\n" +
+                "        Click on a couple trails, explore something interesting! Nature is always out there, if you look\n" +
+                "        <br />\n" +
+                "        <br />\n" +
+                "        <span style=\"font-size: 200%\"><u>Key:</u></span><br />\n" +
+                "        Blue lines: Free Parking<br />\n" +
+                "        Green Lines: Paid Parking<br />\n" +
+                "        <iframe src=\"https://www.google.com/maps/d/embed?mid=1mIbcvGdeoXyR552D1Elfzkwl6ujLNDHN&ehbc=2E312F\" width=\"640\" height=\"480\"></iframe>",
 
+        }
+
+        function toggleButton(longString, buttonID, descriptionID, posLabel = "Read more...", negLabel = "Close...")
+        {
+            var button = document.getElementById(buttonID);
+            var target = document.getElementById(descriptionID);
+            if (target.innerHTML == "")
+            {
+                target.innerHTML = longStrings[longString];
+                button.innerText = negLabel;
+            }
+            else
+            {
+                button.innerText = posLabel;
+                target.innerHTML = "";
+            }
+
+        }
+
+
+    </script>
 
 </body>
