@@ -2,22 +2,49 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import BlogEntry, Tagline
 from django.template import loader
+import os
 import random
 
 from django.http import Http404
 import re
 
-def Homepage(request):
-    template = loader.get_template("SiteTemplates/Homepage02.html")
+#override the dict used for template.render(context)
+def SmartHTML(context : dict, html :str):
+    html = str(html)
+    for k, v in context.items():
+        print(k, v)
+        html = html.replace(k, v)
+    return html
 
+def Homepage(request):
+
+    template = loader.get_template("SiteTemplates/Homepage02.html")
+    
     context = {
         #put plain text replacements here
     }
-    render = str(template.render(context, request))
-    #Use str.replace() for any text with html data, template.render doesn't like it
-    response = HttpResponse(render)
+    render = template.render(context, request)
+    print("Homepage")
+    print("Homepage")
+    path = os.path.dirname(__file__)
+    path = str(os.path.join(path, "CloneWarsQuotes.txt"))
+    print(path)
+    f = open(path, "r", encoding="utf-8")
+    clone = str(f.read())
+    f.close()
+    clone = clone.replace("\n\n", "|||")
 
-    return response
+
+    #Use str.replace() for any text with html data, template.render doesn't like it
+    context = {
+        "CLONE" : clone
+    }
+
+    response = render
+
+    response = SmartHTML(context, response)
+    print(type(render))
+    return HttpResponse(response)
 
 
 def EntryHomepageLine(entry, id):

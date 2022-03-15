@@ -79,6 +79,24 @@ danecarstens.net
     </button>
     <span id = "GreatBody"></span>
 
+    <br />
+    <br />
+
+
+    <span style="font-size: 125%"><i><u>A bit of wisdom from The Clone Wars...</u></i></span>
+    <br />
+    Season <span id="Season">2</span>, Episode <span id="Episode">5</span>: <span id="EpTitle">Landing at Point Rain</span>
+    <br />
+    <br />
+    <span id="CloneQoute", style="font-size: 150% ; color: #176B8E ; background-color: black"><b>Believe in yourself or no one else will.</b></span>
+    <br />
+    <br />
+    <button type="button " onclick="changeQuote(-1)"><- Previous Quote</button>
+    <button type="button " onclick="changeQuote(0, true)">??? Random Quote ???</button>
+    <button type="button " onclick="changeQuote(1)">Next Quote -></button>
+
+
+
 </div>
 
 <span style="font-size: 75%">
@@ -126,6 +144,43 @@ danecarstens.net
             }
 
         }
+        var clone = "CLONE"
+        var cloneSplit = clone.split("|||")
+        var currentQuoteNum = 26
+        function changeQuote(amount, random=false){
+            var randomNum = Math.floor(Math.random() * (cloneSplit.length));
+            if (random == true)
+            {
+                currentQuoteNum = randomNum;
+            }
+            else
+            {
+                currentQuoteNum += amount;
+                if (currentQuoteNum < 0)
+                {
+                    currentQuoteNum = cloneSplit.length - 1;
+                }
+                else if (currentQuoteNum >= cloneSplit.length)
+                {
+                    currentQuoteNum = 0;
+                }
+            }
+            var newQuote = cloneSplit[currentQuoteNum]
+            var quoteText = newQuote.split(": ")
+            var quoteSpan = document.getElementById("CloneQoute")
+            quoteSpan.innerHTML = quoteText[1]
+            var quoteData = quoteText[0].split(" – ")
+            var epNum = quoteData[0].split("×")
+            document.getElementById("Season").innerHTML = epNum[0]
+            document.getElementById("Episode").innerHTML = epNum[1]
+            document.getElementById("EpTitle").innerHTML = quoteData[1]
+
+
+        }
+        changeQuote(0, true)
+
+
+
 
 
     </script>
