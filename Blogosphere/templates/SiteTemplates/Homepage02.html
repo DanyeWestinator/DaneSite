@@ -28,7 +28,7 @@
 danecarstens.net
 <br />
     {% load static %}
-    <span><img src="{% static 'images/DaneTractor.jpg' %} " width="187.5" height="250" /></span>
+    <span id="DanePicture"></span>
     <br />
     <p style="font-size: 35%; color: white">
         Author, Game Designer, Nature Nerd
@@ -180,6 +180,22 @@ danecarstens.net
 
         }
         changeQuote(0, true)
+
+        var PictureURLS = ["DaneTractor.jpg",
+            "LowerMonarch.jpg",
+            "MugMountain.jpg",
+            "SawtoothTop.jpg"
+        ]
+        function randomPicture()
+        {
+            var i = Math.floor(Math.random() * (PictureURLS.length));
+            var pictureSpan = document.getElementById("DanePicture");
+            var html = "<img src=\"{% static 'images/URL' %} \" width=\"187.5\" height=\"250\" />";
+            html = html.replace("URL", PictureURLS[i]);
+            pictureSpan.innerHTML = html;
+            alert(html)
+        }
+        randomPicture()
 
 
 
