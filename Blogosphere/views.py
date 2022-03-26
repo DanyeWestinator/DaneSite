@@ -14,6 +14,20 @@ def SmartHTML(context : dict, html :str):
     for k, v in context.items():
         html = html.replace(k, v)
     return html
+def Portfolio(request, type):
+    url = f"SiteTemplates/{type}Portfolio.html"
+    print(url)
+    template = loader.get_template(url)
+    context = {
+
+    }
+    render = template.render(context, request)
+    context = {
+
+    }
+
+    response = SmartHTML(context, render)
+    return HttpResponse(response)
 
 def Homepage(request):
 
@@ -134,9 +148,6 @@ def get_total_words():
     return (total_words, posts)
 
 def entry(request, id):
-    ###THIS IS A TEST HTML FILE,
-    # TODO replace with how we actually get the html file
-    #html = open("E:\Documents\Code\Python\Website\HTML_files\BlogosphereEntryTemplate.html", "r").read()
     entries = BlogEntry.objects.all()
     if (id >= len(entries) or id < 0):
         raise Http404("Blog Entry does not exist!")
@@ -156,7 +167,6 @@ def entry(request, id):
     html = entry.text_body
     style = entry.style
     #gets the html representation of a blog entry
-    #html_template = open(r".\Blogosphere\templates\SiteTemplates\BlogosphereEntryTemplate.html", "r").read()
     template = loader.get_template("SiteTemplates/BlogosphereEntryTemplate.html")
 
     context = {
