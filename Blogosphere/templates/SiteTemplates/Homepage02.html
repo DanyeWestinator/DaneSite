@@ -181,17 +181,22 @@ danecarstens.net
         }
         changeQuote(0, true)
 
-        var PictureURLS = ["DaneTractor.jpg",
-            "LowerMonarch.jpg",
-            "MugMountain.jpg",
-            "SawtoothTop.jpg"
+        var PictureURLS = ["DaneTractor.jpg-3024x4032",
+            "LowerMonarch.jpg-3024x4032",
+            "MugMountain.jpg-2640x1288",
+            "SawtoothTop.jpg-2640x1288"
         ]
         function randomPicture()
         {
             var i = Math.floor(Math.random() * (PictureURLS.length));
             var pictureSpan = document.getElementById("DanePicture");
-            var html = "<img src=\"{% static 'images/URL' %} \" width=\"250\" height=\"250\" />";
-            html = html.replace("URL", PictureURLS[i]);
+            var html = "<img src=\"{% static 'images/URL' %} \" width=\"WIDTH\" height=\"150\" />";
+            var url = PictureURLS[i]
+            var dimensions = url.split("-")[1].split("x")
+            var ratio = parseFloat(dimensions[0]) / parseFloat(dimensions[1])
+            html = html.replace("URL", url.split("-")[0]);
+            html = html.replace("WIDTH", (ratio * 150).toString)
+
             pictureSpan.innerHTML = html;
         }
         randomPicture()
