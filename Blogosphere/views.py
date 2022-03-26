@@ -19,6 +19,7 @@ def Portfolio(request, type):
     print(url)
     template = loader.get_template(url)
     context = {
+        "TYPE" : type,
 
     }
     render = template.render(context, request)
