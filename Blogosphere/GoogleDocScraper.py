@@ -18,7 +18,7 @@ def parse_blog(html  = ""):
         html = open("test.html", "r").read()
     soup = BeautifulSoup(html, "html.parser")
     style = str(soup.find_all("style")[0])
-    print(style)
+    #print(style)
 
 
     pretty = soup.prettify()

@@ -12,7 +12,6 @@ import re
 def SmartHTML(context : dict, html :str):
     html = str(html)
     for k, v in context.items():
-        print(k, v)
         html = html.replace(k, v)
     return html
 
@@ -24,11 +23,8 @@ def Homepage(request):
         #put plain text replacements here
     }
     render = template.render(context, request)
-    print("Homepage")
-    print("Homepage")
     path = os.path.dirname(__file__)
     path = str(os.path.join(path, "CloneWarsQuotes.txt"))
-    print(path)
     f = open(path, "r", encoding="utf-8")
     clone = str(f.read())
     f.close()
@@ -43,7 +39,6 @@ def Homepage(request):
     response = render
 
     response = SmartHTML(context, response)
-    print(type(render))
     return HttpResponse(response)
 
 

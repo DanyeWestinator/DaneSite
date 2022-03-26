@@ -194,9 +194,9 @@ danecarstens.net
             var url = PictureURLS[i]
             var dimensions = url.split("-")[1].split("x")
             var ratio = parseFloat(dimensions[0]) / parseFloat(dimensions[1])
+            ratio = ratio * 150
             html = html.replace("URL", url.split("-")[0]);
-            html = html.replace("WIDTH", (ratio * 150).toString)
-
+            html = html.replace("WIDTH", ratio.toString())
             pictureSpan.innerHTML = html;
         }
         randomPicture()
