@@ -190,7 +190,7 @@ danecarstens.net
         {
             var i = Math.floor(Math.random() * (PictureURLS.length));
             var pictureSpan = document.getElementById("DanePicture");
-            var html = "<img src=\"{% static 'images/URL' %} \" width=\"187.5\" height=\"250\" />";
+            var html = "<img src=\"{% static 'images/URL' %} \" width=\"250\" height=\"250\" />";
             html = html.replace("URL", PictureURLS[i]);
             pictureSpan.innerHTML = html;
         }
