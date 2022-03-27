@@ -21,6 +21,7 @@
             {
                 "Website" : "",
                 "Commonhood" : "",
+                "TwinRivers" : "",
             }
         function collapseSection(span, buttonID, posLabel = "Read more...", negLabel = "Collapse...") {
             var section = document.getElementById(span)
@@ -61,7 +62,9 @@
 
 <a href="#WebsiteTop">www.danecarstens.net</a> - A django project
 <br />
-<a href="#CommonTop">Common'Hood</a> - a soon-to-be published indie game
+<a href="#CommonTop">Common'Hood</a> - A soon-to-be published indie game
+    <br />
+<a href="#TwinRiversTop">Twin Rivers, Montana</a> - A solo project in Unity
 
 </p>
 
@@ -129,5 +132,31 @@ src="https://www.youtube.com/embed/7CPJmO5tylk">
 </iframe></p>
 
 </span>
+
+<p style="text-align: center; font-size: 200%" id="TwinRiversTop">
+    ----------------------------
+    <br />
+    <u style="color: black; font-size: 150%">Twin Rivers, Montana</u>
+    <br />
+    <button type="button" id="TwinRiversButton" onclick="collapseSection('TwinRivers', 'TwinRiversButton')">Collapse...</button>
+</p>
+<span id="TwinRivers">
+<p style="text-align: center">
+    <u >Solo developed game - Fall 2020</u>
+
+    Play in browser!
+    {% load static %}
+    <iframe
+            src="{% static 'Games/TwinRivers.zip/webBuild/index.html' %}"
+            allow="fullscreen"
+            name="Twin Rivers, Montana"
+            width="420" height="315"
+    ></iframe>
+</p>
+
+
+
+</span>
+
 </body>
 </html>
