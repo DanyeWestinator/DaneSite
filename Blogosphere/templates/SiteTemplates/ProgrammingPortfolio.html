@@ -145,7 +145,31 @@ src="https://www.youtube.com/embed/7CPJmO5tylk">
     <u >Solo developed game - Fall 2020</u>
     <br />
     <a href="https://danecarstens.itch.io/twin-rivers">itch.io</a> link to play in browser!
-    <iframe src="{% static 'images/TwinRiverVid01.mp4' %}" width="420" height="315"></iframe>
+    <br />
+    <br />
+    I programmed an extensive dialogue tree system, which took in JSON files and created branching paths.
+    <br />
+    The backend dialogue trees were written using <a href="https://yarnspinner.dev/">yarnspinner</a>, then that data was
+    fed into my custom Unity implementation.
+    <br />
+    <br />
+    <iframe src="{% static 'images/TwinRiversVid01.mp4' %}" width="300" height="300"></iframe>
+    <br />
+    Other than speaking with witnesses, the primary way to gather evidence is to find clues around the crime scene.
+    <br />
+    This system integrated with my dialogue, and finding certain clues opens up hidden dialogue options.
+    <br />
+    The clue prefab itself was modular, and creating new ones was a simple drag and drop
+    <br />
+    <iframe src="{% static 'images/TwinRiversClueVideo.mp4' %}" width="300" height="300"></iframe>
+    <br />
+    To assist in their fact finding, the player had access to important information said during conversation,
+    as well as all their clues
+    <br />
+    There was also a map, which updated its position in real time as the player moved
+    <br />
+    <iframe src="{% static 'images/TwinRiversConversations.mp4' %}" width="300" height="300"></iframe>
+    <iframe src="{% static 'images/TwinRiversMap.png' %}" width="300" height="300"></iframe>
 
 </p>
 
