@@ -11,9 +11,34 @@
             overflow-x:hidden;
             max-width: 100%;
             overflow-y: scroll;
-            zoom : 300%;
+            zoom : 200%;
         }
     </style>
+
+
+    <script>
+        var collapsedSections =
+            {
+                "Website" : "",
+                "Commonhood" : "",
+            }
+        function collapseSection(span, buttonID, posLabel = "Read more...", negLabel = "Collapse...") {
+            var section = document.getElementById(span)
+            var button = document.getElementById(buttonID)
+            if (collapsedSections[span] == "") {
+                collapsedSections[span] = section.innerHTML;
+            }
+            if (button.innerHTML == negLabel)
+            {
+                section.innerHTML = "";
+                button.innerHTML = posLabel;
+            }
+            else{
+                section.innerHTML = collapsedSections[span];
+                button.innerHTML = negLabel;
+            }
+        }
+    </script>
 </head>
 <body>
 <div style="font-size: 250%; text-align: center">
@@ -30,12 +55,27 @@
 </p>
 
 <br />
-<p style="text-align: center; font-size: 200%">
+<p style="text-align: center">
+    <u style="font-size: 150%">Jump to section:</u>
+<br />
+
+<a href="#WebsiteTop">www.danecarstens.net</a> - A django project
+<br />
+<a href="#CommonTop">Common'Hood</a> - a soon-to-be published indie game
+
+</p>
+
+
+<br />
+<p style="text-align: center; font-size: 200%" id="WebsiteTop">
     ----------------------------
     <br />
     <u style="color: black">www.danecarstens.net</u>
+    <br />
+    <button type="button" id="WebsiteButton" onclick="collapseSection('Website', 'WebsiteButton')">Collapse...</button>
 </p>
 <br />
+<span id="Website">
 The website itself is a portfolio piece!
 <br />
 This entire website was coded by me, using the django web framework. I hosted with the wonderful
@@ -46,12 +86,18 @@ I learned basic HTML for this project, inspired by the retro look webpages had i
 minimized clutter, while making all relevant information as prominent as possible.
 <br />
 Every line of code was written by me, both front-end and backend
+</span>
 
-<p style="text-align: center; font-size: 200%">
+
+
+<p style="text-align: center; font-size: 200%" id="CommonTop">
     ----------------------------
     <br />
     <u style="color: black; font-size: 150%">Common'Hood</u>
+    <br />
+    <button type="button" id="CommonhoodButton" onclick="collapseSection('Commonhood', 'CommonhoodButton')">Collapse...</button>
 </p>
+<span id="Commonhood">
 <p style="text-align: center">
     <u >Common'Hood junior developer: June 2021 - December 2021</u>
 </p>
@@ -77,6 +123,11 @@ In game, the user could select the different languages, and the game shifted lan
 &nbsp;&nbsp;For the online multi-player, we used the Mirror library for unity.
 <br />
 The game is set to come out in Fall 2022
+<p style="text-align: center">
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/7CPJmO5tylk">
+</iframe></p>
 
+</span>
 </body>
 </html>
