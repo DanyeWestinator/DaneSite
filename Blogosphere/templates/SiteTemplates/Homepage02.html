@@ -7,12 +7,12 @@
     <style id = "BodyStyle">
         body
         {
-            background-color: darkcyan;
-            color: white;
+            background-color: black;
+            color: #00ff00;
             overflow-x:hidden;
             max-width: 100%;
             overflow-y: scroll;
-            zoom : 200%;
+            zoom : 250%;
         }
     </style>
     <style type="text/css">
@@ -24,35 +24,39 @@
 
 <body>
 <!-- Header -->
-<div style="font-size: 400%; text-align: center; color: black">
+<div style="font-size: 400%; color: #00a800">
 danecarstens.net
 <br />
     {% load static %}
     <span id="DanePicture"></span>
     <br />
-    <p style="font-size: 35%; color: white">
+    <p style="font-size: 35%; color: #00a800">
         Author, Game Designer, Nature Nerd
     </p>
-    <p style="font-size: 15%; color: white">
-    Dane is a Computer Game Science student at UCI.
+    <p style="font-size: 15%; color: #00a800">
+    Dane is finishing his last class in his last quarter at UCI, obtaining a Computer Game Science degree.
         <br/>He spends his days reading and writing SciFi/Fantasy,
-        <br/>
-        working on indie games,
+        <br/>building indie games,
         <br/>ranting about why the US needs better public transit,
-        <br/>and camping across the National
-        Parks System
-
+        <br/>and camping across the National Parks System
+        <br />
+        <br />
+        <<a href="https://drive.google.com/uc?export=download&id=1vf0llu53vKQnWDmm3TO1wCm1bT9v1nio"
+            style="color: #00b5ff">Resume</a>>
+        <br />
         <br />
         <br />
         Social links: <br />
 
-        <a href="https://www.instagram.com/danyewest/">Instagram</a>
+        <<a href="https://www.instagram.com/danyewest/" style="color: #00b5ff">Instagram</a>>
         <br />
-        <a href="https://twitter.com/CarstensDane">Twitter</a>
+        <<a href="https://twitter.com/CarstensDane" style="color: #00b5ff">Twitter</a>>
+
+
     </p>
 </div>
-<!-- Body -->
-<div style="text-align: center">
+<!-- Current projects are being moved to portfolio - this be my homepage
+<div>
     <br />
     <span style = "font-size: 150%">
         <u>Current Projects:</u>
@@ -75,12 +79,7 @@ danecarstens.net
     <br />
     <span id = "ScorchingText"></span>
     <br />
-    <a href="Blogosphere">Blogosphere</a>, a political, meandering ranting blog
-    <button type = "button" onclick="toggleButton('Blogosphere', 'blogToggleLabel', 'blogosphereLong')"
-            id = "blogToggleLabel">Read more...</button>
-    <br />
-    <span id = "blogosphereLong"></span>
-    <br />
+
 
     The Great Outdoors, an annotated Google Map of interesting hiking spots
     <button type = "button" onclick="toggleButton('GreatBodyText', 'GreatOutButton', 'GreatBody', 'Expand...')"
@@ -88,12 +87,12 @@ danecarstens.net
         Expand...
     </button>
     <span id = "GreatBody"></span>
-
+-->
     <br />
     <br />
     <span style="font-size: 250%"><u>Portfolio Work:</u>
     <br /></span>
-    <a href="Portfolio/Programming">Programming work</a>
+    <<a href="Portfolio/Programming" style="color: #00b5ff">Programming work</a>>
     <br />
     <br />
 
@@ -105,9 +104,12 @@ danecarstens.net
     <span id="CloneQoute", style="font-size: 150% ; color: #176B8E ; background-color: black"><b>Believe in yourself or no one else will.</b></span>
     <br />
     <br />
-    <button type="button " onclick="changeQuote(-1)"><- Previous Quote</button>
-    <button type="button " onclick="changeQuote(0, true)">??? Random Quote ???</button>
-    <button type="button " onclick="changeQuote(1)">Next Quote -></button>
+    <button type="button " onclick="changeQuote(-1)" style="color: #00b5ff;
+    background-color: black; border-color: white"><- Previous Quote</button>
+    <button type="button " onclick="changeQuote(0, true)" style="color: #00b5ff;
+    background-color: black; border-color: white"">??? Random Quote ???</button>
+    <button type="button " onclick="changeQuote(1)" style="color: #00b5ff;
+    background-color: black; border-color: white"">Next Quote -></button>
 
 
 
@@ -116,7 +118,7 @@ danecarstens.net
 <span style="font-size: 75%">
     <br />
     <br />
-    For any further inquries, please email me at <a href="mailto:dcarsten@uci.edu">dcarsten@uci.edu</a>
+    For any further inquries, please email me at <a href="mailto:danemcarstens@gmail.com" style="color: #00b5ff">danemcarstens@gmail.com</a>
 </span>
 
 <script>
@@ -131,9 +133,9 @@ danecarstens.net
                 "he’s left with no allies except a shape-shifter of dubious morality and trustworthiness. " +
                 "Can he take back his Empire, and avenge his family?<br /><br />" +
                 "A fun fantasy novel clocking in at 88 thousand words<br />" +
-                "<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vQpHKGK09l9UY3sOMIKp37UJlZEWdu8Rc5CYDU2apQEQCx1mGG3Kw72CLo6nlPQ0IymTGMJeH1nUUiP/pub?embedded=true\" " +
+                "<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vQmB_g1hE32ckwhGqjDLuCkD31wGQk3kiTtQcdhHTGo-GCmdScNF_BgTPNI8gOYeofOxAH4az74qD5n/pub?embedded=true\"" +
                 "width = \"300\" height = '400'></iframe>" +
-                "<br /><a href='https://docs.google.com/document/d/1j3fcicZabotcf4E3mFsNFZRMD34bx3Z8YwI3NS1Wy7o/edit?usp=sharing'>Google doc link:</a> please make comments! <br /><br />",
+                "<br /><a href='https://docs.google.com/document/d/14D16fG6w6QsV4sRa5RbHgh_N2ma5DYlSML9-Vu38SRE/edit?usp=sharing'>Google doc link:</a> please make comments! <br /><br />",
             "GreatBodyText" : "<br />\n" +
                 "        <br />\n" +
                 "        Click on a couple trails, explore something interesting! Nature is always out there, if you look\n" +
@@ -200,7 +202,11 @@ danecarstens.net
         var PictureURLS = ["DaneTractor.jpg-3024x4032",
             "LowerMonarch.jpg-3024x4032",
             "MugMountain.jpg-2640x1288",
-            "SawtoothTop.jpg-2640x1288"
+            "SawtoothTop.jpg-2640x1288",
+            "CityHall.jpg-2268x4032",
+            "Vans.jpg-2268x4032",
+            "GooseChair.jpg-3264x1836",
+            "Tram.jpg-5184x3456",
         ]
         function randomPicture()
         {
