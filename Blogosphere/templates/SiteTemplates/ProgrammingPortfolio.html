@@ -7,11 +7,10 @@
         body
         {
             background-color: black;
-            color: #00ff00;
+            color: #00a800;
             overflow-x:hidden;
             max-width: 100%;
             overflow-y: scroll;
-            zoom : 250%;
         }
     </style>
 
@@ -43,15 +42,16 @@
 </head>
 <body>
 <div style="font-size: 250%">
-<u>Programming Portfolio</u>
+<u id="PortfolioTop" style="color: #00ff00">Programming Portfolio</u>
 
 </div>
 <p>
     {% load static %}
     <img src="{% static 'images/unity_logo.png' %} " width="125" height="100" />
+    <img src="{% static 'images/cs_logo.png' %} " width="100" height="100" />
     <img src="{% static 'images/python_logo.png' %} " width="75" height="75" />
     <img src="{% static 'images/django_logo.png' %} " width="75" height="60" />
-    <img src="{% static 'images/cs_logo.png' %} " width="75" height="75" />
+
 
     <br />
 </p>
@@ -60,17 +60,67 @@
 <p>
     <u style="font-size: 150%">Jump to section:</u>
 <br />
+    <a href="#CommonTop" style="color: #00b5ff">Common'Hood</a> - An indie Steam title
+    <br />
 
-<a href="#WebsiteTop">www.danecarstens.net</a> - A django project
+<a href="#WebsiteTop" style="color: #00b5ff">www.danecarstens.net</a> - A django project
 <br />
-<a href="#CommonTop">Common'Hood</a> - A soon-to-be published indie game
-    <br />
-<a href="#TwinRiversTop">Twin Rivers, Montana</a> - A solo project in Unity
+
+<a href="#TwinRiversTop" style="color: #00b5ff">Twin Rivers, Montana</a> - A solo project in Unity
     <br />
 
-<a href="https://www.danecarstens.net">Return to home</a>
+<a href="http://www.danecarstens.net" style="color: #00b5ff">Return to home</a>
 </p>
 
+
+<p style="font-size: 200%" id="CommonTop">
+    ----------------------------
+    <br />
+    <u style="color: #00ff00; font-size: 150%">Common'Hood</u>
+    <br />
+    <a href="#PortfolioTop" style="color: #00b5ff">Jump to top</a>
+</p>
+<span id="Commonhood">
+    <u>>>Common'Hood developer: June - October 2021, July - October 2022</u>
+
+    <br />
+    <br />
+As a developer, my tasks included:<br />
+    >Building and implementing a multiplayer sandbox mode<br />
+    >>Using the Mirror library for Unity, we ported all singe-player building features to a creative sandbox level,
+    enabling friends to build and collaborate together
+    <br /><br />
+
+    >Creating a localization system<br />
+    >>All text, from dialogue to item flavor, had to be scraped and added to a spreadsheet<br />
+    >>Each line included the source of the text and a column for each language, including English<br />
+    >>Once the CSV spreadsheet was translated, the correct language was displayed to the player<br /><br />
+
+    >Building and maintaining QoL features<br />
+    >>One feature automatically swapped to the next ingredient when constructing blueprints<br />
+    >>A developer tool I built displayed all 3d models, sorted by vertex count.
+    This massively increased performance after several problem areas were identified<br />
+    >>On top of all my other tasks, we regularly cleared out the public buglist,
+    fixing everything from pathfinding hiccups to texture glitches
+    <br /><br />
+
+
+From their steam page: <br />
+    "Common’hood is a community building and economy management game with
+    highly customizable base building tools. Scavenge for materials, grow your own food,
+    research new technology, craft new tools, build a home, make friends.
+    Form your community and take it from surviving to thriving!"
+<p>
+    <<a href="https://store.steampowered.com/app/962090/Commonhood/" style="color: #00b5ff">Steam link</a>>
+    <br />
+    <<a href="https://www.common-hood.com/" style="color: #00b5ff">Website link</a>>
+</p>
+<p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/7CPJmO5tylk">
+</iframe></p>
+
+</span>
 
 <br />
 <p style="font-size: 200%" id="WebsiteTop">
@@ -95,46 +145,6 @@ Every line of code was written by me, both front-end and backend
 </span>
 
 
-
-<p style="font-size: 200%" id="CommonTop">
-    ----------------------------
-    <br />
-    <u style="color: #00a800; font-size: 150%">Common'Hood</u>
-    <br />
-    <button type="button" id="CommonhoodButton" onclick="collapseSection('Commonhood', 'CommonhoodButton')">Collapse...</button>
-</p>
-<span id="Commonhood">
-<p>
-    <u >Common'Hood junior developer: June 2021 - December 2021</u>
-</p>
-From their steam page: <br />
-    "Common’hood is a community building and economy management game with
-    highly customizable base building tools. Scavenge for materials, grow your own food,
-    research new technology, craft new tools, build a home, make friends.
-    Form your community and take it from surviving to thriving!"
-<p>
-    <a href="https://store.steampowered.com/app/962090/Commonhood/">Steam link:</a>
-    <br />
-    <a href="https://www.common-hood.com/">Website link:</a>
-</p>
-&nbsp;&nbsp;I was a full time developer for the summer and fall of 2021. I worked on bug fixes, adding developer tools,
-and prototyping the online multi-player. The game was built in the Unity engine.
-<br />
-<br />
-&nbsp;&nbsp;One of my more important tasks was creating the localization system. I had to scrape all text from the game, and export
-it to an Excel file. It had columns for the english text, and space for the translator to put translated text.
-With one click, the writing team could export all text in the game, and just as easily update the translated text.
-In game, the user could select the different languages, and the game shifted languages.
-<br />
-&nbsp;&nbsp;For the online multi-player, we used the Mirror library for unity.
-<br />
-The game is set to come out in Fall 2022
-<p>
-<iframe width="420" height="315"
-src="https://www.youtube.com/embed/7CPJmO5tylk">
-</iframe></p>
-
-</span>
 
 <p style="font-size: 200%" id="TwinRiversTop">
     ----------------------------

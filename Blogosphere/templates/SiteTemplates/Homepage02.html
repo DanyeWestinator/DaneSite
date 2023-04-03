@@ -24,35 +24,41 @@
 
 <body>
 <!-- Header -->
-<div style="font-size: 400%; color: #00a800">
-danecarstens.net
+<div style="color: #00a800">
+
+    <p style="font-size: 250%; color : #00ff00;
+     font-family: Georgia">danecarstens.net</p>
+
 <br />
     {% load static %}
     <span id="DanePicture"></span>
     <br />
-    <p style="font-size: 35%; color: #00a800">
+    <p style="font-size: 110%; color: #00ff00">
         Author, Game Designer, Nature Nerd
     </p>
-    <p style="font-size: 15%; color: #00a800">
-    Dane is finishing his last class in his last quarter at UCI, obtaining a Computer Game Science degree.
-        <br/>He spends his days reading and writing SciFi/Fantasy,
-        <br/>building indie games,
-        <br/>ranting about why the US needs better public transit,
-        <br/>and camping across the National Parks System
+    <p style="color: #00a800">
+    >Dane is finishing his last class in his last quarter at UCI, obtaining a Computer Game Science degree.
+        <br /><br/>>He spends his days reading and writing SciFi/Fantasy,
+        <br /><br/>>building indie games,
+        <br /><br/>>ranting about why the US needs better public transit,
+        <br /><br/>>and camping across the National Parks System
         <br />
+        <br />
+    <span style="font-size: 250%; color: #00ff00"><u>Portfolio Work:</u>
+    <br /></span>
+    <<a href="Portfolio/Programming" style="color: #00b5ff">Programming work</a>>
+    <br />
         <br />
         <<a href="https://drive.google.com/uc?export=download&id=1vf0llu53vKQnWDmm3TO1wCm1bT9v1nio"
             style="color: #00b5ff">Resume</a>>
         <br />
         <br />
         <br />
-        Social links: <br />
+        <u style="color: #00ff00">Social links: </u><br />
 
         <<a href="https://www.instagram.com/danyewest/" style="color: #00b5ff">Instagram</a>>
         <br />
         <<a href="https://twitter.com/CarstensDane" style="color: #00b5ff">Twitter</a>>
-
-
     </p>
 </div>
 <!-- Current projects are being moved to portfolio - this be my homepage
@@ -89,11 +95,7 @@ danecarstens.net
     <span id = "GreatBody"></span>
 -->
     <br />
-    <br />
-    <span style="font-size: 250%"><u>Portfolio Work:</u>
-    <br /></span>
-    <<a href="Portfolio/Programming" style="color: #00b5ff">Programming work</a>>
-    <br />
+
     <br />
 
     <span style="font-size: 125%"><i><u>A bit of wisdom from The Clone Wars...</u></i></span>
@@ -216,7 +218,7 @@ danecarstens.net
             var url = PictureURLS[i]
             var dimensions = url.split("-")[1].split("x")
             var ratio = parseFloat(dimensions[0]) / parseFloat(dimensions[1])
-            ratio = ratio * 150
+            ratio = ratio * 200
             html = html.replace("URL", url.split("-")[0]);
             html = html.replace("WIDTH", ratio.toString())
             pictureSpan.innerHTML = html;
