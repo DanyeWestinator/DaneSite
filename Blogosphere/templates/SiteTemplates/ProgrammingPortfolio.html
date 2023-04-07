@@ -12,39 +12,27 @@
             max-width: 100%;
             overflow-y: scroll;
         }
-    </style>
-
-
-    <script>
-        var collapsedSections =
-            {
-                "Website" : "",
-                "Commonhood" : "",
-                "TwinRivers" : "",
-            }
-        function collapseSection(span, buttonID, posLabel = "Read more...", negLabel = "Collapse...") {
-            var section = document.getElementById(span)
-            var button = document.getElementById(buttonID)
-            if (collapsedSections[span] == "") {
-                collapsedSections[span] = section.innerHTML;
-            }
-            if (button.innerHTML == negLabel)
-            {
-                section.innerHTML = "";
-                button.innerHTML = posLabel;
-            }
-            else{
-                section.innerHTML = collapsedSections[span];
-                button.innerHTML = negLabel;
-            }
+        h1
+        {
+            color: #00ff00;
+            font-size: 300%;
         }
-    </script>
+        h2
+        {
+          color: #00ff00;
+        font-size: 175%;
+            text-decoration: underline;
+        }
+        h3{
+            color : #00ff00;
+            font-size: 120%;
+            font-style: italic;
+        }
+
+    </style>
 </head>
 <body>
-<div style="font-size: 250%">
-<u id="PortfolioTop" style="color: #00ff00">Programming Portfolio</u>
-
-</div>
+<h1 id="PortfolioTop">Programming Portfolio</h1>
 <p>
     {% load static %}
     <img src="{% static 'images/unity_logo.png' %} " width="125" height="100" />
@@ -52,15 +40,18 @@
     <img src="{% static 'images/python_logo.png' %} " width="75" height="75" />
     <img src="{% static 'images/django_logo.png' %} " width="75" height="60" />
 
-
     <br />
 </p>
 
 <br />
 <p>
-    <u style="font-size: 150%">Jump to section:</u>
+    <h2>Jump to section:</h2>
 <br />
-    <a href="#CommonTop" style="color: #00b5ff">Common'Hood</a> - An indie Steam title
+    <a href="#CommonTop" style="color: #00b5ff">Common'Hood</a>
+- An indie crafting game, now available on steam
+    <br />
+<a href="#SpaceRunnersTop" style="color: #00b5ff">SpaceRunners!</a>
+- Senior thesis infinite running game
     <br />
 
 <a href="#WebsiteTop" style="color: #00b5ff">www.danecarstens.net</a> - A django project
@@ -71,20 +62,15 @@
 
 <a href="http://www.danecarstens.net" style="color: #00b5ff">Return to home</a>
 </p>
-
-
-<p style="font-size: 200%" id="CommonTop">
-    ----------------------------
+    <p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
     <br />
-    <u style="color: #00ff00; font-size: 150%">Common'Hood</u>
+
     <br />
     <a href="#PortfolioTop" style="color: #00b5ff">Jump to top</a>
-</p>
 <span id="Commonhood">
-    <u>>>Common'Hood developer: June - October 2021, July - October 2022</u>
+    <h2>Common'Hood</h2>
+    <h3>>>Unity developer: June - October 2021, July - October 2022</h3>
 
-    <br />
-    <br />
 As a developer, my tasks included:<br />
     >Building and implementing a multiplayer sandbox mode<br />
     >>Using the Mirror library for Unity, we ported all singe-player building features to a creative sandbox level,
@@ -122,7 +108,32 @@ src="https://www.youtube.com/embed/7CPJmO5tylk">
 
 </span>
 
-<br />
+<p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
+
+<div id="SpaceRunnersTop">
+    <h2>SpaceRunners!</h2>
+    <h3>>>Senior thesis project: Spring Quarter 2022</h3>
+
+    >>My senior thesis was a solo project in Godot, creating an android infinite runner<br />
+    >>Everything, from programming to art, was done by me<br />
+    <<a href="https://drive.google.com/drive/folders/1mXzZsK1MvOIKCLFup6I_QwO0RVKjjsFe?usp=sharing"
+        style="color: #00b5ff">Playable builds</a>>
+
+    <br />
+    <br />
+    <iframe src="{% static 'images/SpaceRunners01.mp4' %}" width="270" height="600"></iframe><br />
+    >>I built a boost, allowing the player to temporarily smash through asteroids and enemy Vipers<br />
+    <br />
+    >>Laser bolts clear obstacles, but the enemy shoots back
+    <br /><br />
+    >>One major advantage of creating a mobile game was it was much easier to find playtesters.
+    >>>I could hand over my phone, and get instant feedback
+    >>>This constant iteration made the game much more successful
+
+</div>
+
+
+
 <p style="font-size: 200%" id="WebsiteTop">
     ----------------------------
     <br />
