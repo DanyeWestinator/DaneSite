@@ -8,11 +8,22 @@
         body
         {
             background-color: black;
-            color: #00ff00;
+            color: #00a800;
             overflow-x:hidden;
             max-width: 100%;
             overflow-y: scroll;
-            zoom : 250%;
+        }
+        h1
+        {
+            color: #00ff00;
+            font-size: 300%;
+            font-family: Georgia
+        }
+        h2
+        {
+            color: #00ff00;
+            font-size: 175%;
+            text-decoration: underline;
         }
     </style>
     <style type="text/css">
@@ -24,19 +35,23 @@
 
 <body>
 <!-- Header -->
-<div style="color: #00a800">
+    <h1>danecarstens.net</h1>
+    <!-- <p style="font-size: 250%; color : #00ff00;
+     font-family: Georgia">danecarstens.net</p>-->
 
-    <p style="font-size: 250%; color : #00ff00;
-     font-family: Georgia">danecarstens.net</p>
-
+    <h2 style="text-decoration: none">Quick links:&emsp;
+    <<a href="Portfolio/Programming" style="color: #00b5ff">Programming Portfolio</a>>&emsp;
+    <<a href="https://drive.google.com/uc?export=download&id=1vf0llu53vKQnWDmm3TO1wCm1bT9v1nio"
+    style="color: #00b5ff">Resume</a>>
+    </h2>
 <br />
     {% load static %}
     <span id="DanePicture"></span>
     <br />
-    <p style="font-size: 110%; color: #00ff00">
+    <h2>
         Author, Game Designer, Nature Nerd
-    </p>
-    <p style="color: #00a800">
+    </h2>
+    <p>
     >Dane is finishing his last class in his last quarter at UCI, obtaining a Computer Game Science degree.
         <br /><br/>>He spends his days reading and writing SciFi/Fantasy,
         <br /><br/>>building indie games,
@@ -44,61 +59,18 @@
         <br /><br/>>and camping across the National Parks System
         <br />
         <br />
-    <span style="font-size: 250%; color: #00ff00"><u>Portfolio Work:</u>
-    <br /></span>
-    <<a href="Portfolio/Programming" style="color: #00b5ff">Programming work</a>>
-    <br />
         <br />
-        <<a href="https://drive.google.com/uc?export=download&id=1vf0llu53vKQnWDmm3TO1wCm1bT9v1nio"
-            style="color: #00b5ff">Resume</a>>
-        <br />
-        <br />
-        <br />
-        <u style="color: #00ff00">Social links: </u><br />
-
+    <h2>Social links:</h2>
         <<a href="https://www.instagram.com/danyewest/" style="color: #00b5ff">Instagram</a>>
         <br />
         <<a href="https://twitter.com/CarstensDane" style="color: #00b5ff">Twitter</a>>
     </p>
 </div>
-<!-- Current projects are being moved to portfolio - this be my homepage
-<div>
-    <br />
-    <span style = "font-size: 150%">
-        <u>Current Projects:</u>
-        <br />
-    </span>
-    <br />
-    Space Runners!
-    <br />
-    My senior capstone project, a solo game built in Godot
-    <br />
-    Find playable builds <a href = "https://drive.google.com/drive/folders/1mXzZsK1MvOIKCLFup6I_QwO0RVKjjsFe?usp=sharing">HERE</a>
-    <br />
-    <br />
-    <br />
-    The Scorching Ray, a novel
-    <button type = "button" onclick="toggleButton('ScorchingRay', 'ScorchingButton', 'ScorchingText')"
-    id = "ScorchingButton">
-        Read more...
-    </button>
-    <br />
-    <span id = "ScorchingText"></span>
-    <br />
-
-
-    The Great Outdoors, an annotated Google Map of interesting hiking spots
-    <button type = "button" onclick="toggleButton('GreatBodyText', 'GreatOutButton', 'GreatBody', 'Expand...')"
-    id = "GreatOutButton">
-        Expand...
-    </button>
-    <span id = "GreatBody"></span>
--->
     <br />
 
     <br />
 
-    <span style="font-size: 125%"><i><u>A bit of wisdom from The Clone Wars...</u></i></span>
+    <h2><i>A bit of wisdom from The Clone Wars...</i></h2>
     <br />
     Season <span id="Season">2</span>, Episode <span id="Episode">5</span>: <span id="EpTitle">Landing at Point Rain</span>
     <br />
@@ -109,9 +81,9 @@
     <button type="button " onclick="changeQuote(-1)" style="color: #00b5ff;
     background-color: black; border-color: white"><- Previous Quote</button>
     <button type="button " onclick="changeQuote(0, true)" style="color: #00b5ff;
-    background-color: black; border-color: white"">??? Random Quote ???</button>
+    background-color: black; border-color: white">??? Random Quote ???</button>
     <button type="button " onclick="changeQuote(1)" style="color: #00b5ff;
-    background-color: black; border-color: white"">Next Quote -></button>
+    background-color: black; border-color: white">Next Quote -></button>
 
 
 
@@ -124,55 +96,16 @@
 </span>
 
 <script>
-        var longStrings = {
-            "Blogosphere" : "There were far too many times that I yelled at my hometown paper, the wonderful Visalia Times Delta,\
-          about the absolute insanity in the world of politics today. I started this blog project\
-          as a long form ranting project, shooting for a weekly release schedule of roughly 1000 words per entry.\
-          ",
-            "ScorchingRay" : "<br /><span><img src=\"{% static 'images/ScorchingRayCoverWords.jpg' %} \" width=\"187.5\" height=\"250\" /></span>" +
-                "<br />The coup was bloody but short. Jace Carver was lucky to escape with his life, " +
-                "but he’s still in trouble. Teleported to the middle of the wilderness, " +
-                "he’s left with no allies except a shape-shifter of dubious morality and trustworthiness. " +
-                "Can he take back his Empire, and avenge his family?<br /><br />" +
-                "A fun fantasy novel clocking in at 88 thousand words<br />" +
-                "<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vQmB_g1hE32ckwhGqjDLuCkD31wGQk3kiTtQcdhHTGo-GCmdScNF_BgTPNI8gOYeofOxAH4az74qD5n/pub?embedded=true\"" +
-                "width = \"300\" height = '400'></iframe>" +
-                "<br /><a href='https://docs.google.com/document/d/14D16fG6w6QsV4sRa5RbHgh_N2ma5DYlSML9-Vu38SRE/edit?usp=sharing'>Google doc link:</a> please make comments! <br /><br />",
-            "GreatBodyText" : "<br />\n" +
-                "        <br />\n" +
-                "        Click on a couple trails, explore something interesting! Nature is always out there, if you look\n" +
-                "        <br />\n" +
-                "        <br />\n" +
-                "        <span style=\"font-size: 200%\"><u>Key:</u></span><br />\n" +
-                "        Blue lines: Free Parking<br />\n" +
-                "        Green Lines: Paid Parking<br />\n" +
-                "        <iframe src=\"https://www.google.com/maps/d/embed?mid=1mIbcvGdeoXyR552D1Elfzkwl6ujLNDHN&ehbc=2E312F\" width=\"500\" height=\"800\"></iframe>",
-
-        }
-
-        function toggleButton(longString, buttonID, descriptionID, posLabel = "Read more...", negLabel = "Close...")
-        {
-            var button = document.getElementById(buttonID);
-            var target = document.getElementById(descriptionID);
-            if (target.innerHTML == "")
-            {
-                target.innerHTML = longStrings[longString];
-                button.innerText = negLabel;
-            }
-            else
-            {
-                button.innerText = posLabel;
-                target.innerHTML = "";
-            }
-
-        }
         var clone = "CLONE"
         var cloneSplit = clone.split("|||")
         var currentQuoteNum = 26
+        /*Changes which Clone Wars quote to display.
+        Can either be random, or +- 1 */
         function changeQuote(amount, random=false){
-            var randomNum = Math.floor(Math.random() * (cloneSplit.length));
+
             if (random == true)
             {
+                var randomNum = Math.floor(Math.random() * (cloneSplit.length));
                 currentQuoteNum = randomNum;
             }
             else
@@ -224,11 +157,6 @@
             pictureSpan.innerHTML = html;
         }
         randomPicture()
-
-
-
-
-
     </script>
 
 </body>
