@@ -28,6 +28,9 @@
             font-size: 120%;
             font-style: italic;
         }
+        a{
+            color: #00b5ff
+        }
 
     </style>
 </head>
@@ -54,7 +57,7 @@ from networking to algorithm analysis to UI/UX design
 <p>
     <h2>Jump to section:</h2>
 <br />
-    <a href="#CommonTop" style="color: #00b5ff">Common'Hood</a>
+    <a href="#Commonhood" style="color: #00b5ff">Common'Hood</a>
 - An indie crafting game, now available on steam
     <br />
 <a href="#SpaceRunnersTop" style="color: #00b5ff">SpaceRunners!</a>
@@ -64,7 +67,7 @@ from networking to algorithm analysis to UI/UX design
 <a href="#WebsiteTop" style="color: #00b5ff">www.danecarstens.net</a> - A django website
 <br />
 
-<a href="#TwinRiversTop" style="color: #00b5ff">Twin Rivers, Montana</a> - A solo project in Unity
+<a href="#TwinRivers" style="color: #00b5ff">Twin Rivers, Montana</a> - A solo Unity murder mystery game
     <br />
 
 <a href="http://www.danecarstens.net" style="color: #00b5ff">Return to home</a>
@@ -74,32 +77,32 @@ from networking to algorithm analysis to UI/UX design
 
     <br />
 
-<span id="Commonhood">
-    <h2>Common'Hood</h2>
-    <h3>>>Unity developer: June - October 2021, July - October 2022</h3>
+<span>
+    <h2 id="Commonhood">Common'Hood</h2>
+    <h3>>Unity developer: June - October 2021, July - October 2022</h3>
 
-As a developer, my tasks included:<br />
-    >Building and implementing a multiplayer sandbox mode<br />
-    >>Using the Mirror library for Unity, we ported all singe-player building features to a creative sandbox level,
+>As a developer, my tasks included:<br />
+    >>Building and implementing a multiplayer sandbox mode<br />
+    >>>Using the Mirror library for Unity, we ported all singe-player building features to a creative sandbox level,
     enabling friends to build and collaborate together
     <br /><br />
 
-    >Creating a localization system<br />
-    >>All text, from dialogue to item flavor, had to be scraped and added to a spreadsheet<br />
-    >>Each line included the source of the text and a column for each language, including English<br />
-    >>Once the CSV spreadsheet was translated, the correct language was displayed to the player<br /><br />
+    >>Creating a localization system<br />
+    >>>All text, from dialogue to item flavor, had to be scraped and added to a spreadsheet<br />
+    >>>Each line included the source of the text and a column for each language, including English<br />
+    >>>Once the CSV spreadsheet was translated, the correct language was displayed to the player<br /><br />
 
-    >Building and maintaining QoL features<br />
-    >>One feature automatically swapped to the next ingredient when constructing blueprints<br />
-    >>A developer tool I built displayed all 3d models, sorted by vertex count.
+    >>Building and maintaining QoL features<br />
+    >>>One feature automatically swapped to the next ingredient when constructing blueprints<br />
+    >>>A developer tool I built displayed all 3d models, sorted by vertex count.
     This massively increased performance after several problem areas were identified<br />
-    >>On top of all my other tasks, we regularly cleared out the public buglist,
+    >>>On top of all my other tasks, we regularly cleared out the public buglist,
     fixing everything from pathfinding hiccups to texture glitches
     <br /><br />
 
 
-From their steam page: <br />
-    "Common’hood is a community building and economy management game with
+>From their steam page: <br />
+    >>"Common’hood is a community building and economy management game with
     highly customizable base building tools. Scavenge for materials, grow your own food,
     research new technology, craft new tools, build a home, make friends.
     Form your community and take it from surviving to thriving!"
@@ -110,7 +113,7 @@ From their steam page: <br />
 </p>
 <p>
 <iframe width="420" height="315"
-src="https://www.youtube.com/embed/7CPJmO5tylk">
+src="https://www.youtube.com/embed/7CPJmO5tylk", allow="fullscreen">
 </iframe></p>
 <a href="#PortfolioTop" style="color: #00b5ff">Jump to top</a>
 </span>
@@ -119,7 +122,7 @@ src="https://www.youtube.com/embed/7CPJmO5tylk">
 
 <div id="SpaceRunnersTop">
     <h2>SpaceRunners!</h2>
-    <h3>>>Senior thesis project: Spring Quarter 2022</h3>
+    <h3>>Senior thesis project: Spring Quarter 2022</h3>
 
     >>My senior thesis was a solo project in Godot, creating an android infinite runner<br />
     >>Everything, from programming to art, was done by me<br />
@@ -163,7 +166,7 @@ src="https://www.youtube.com/embed/7CPJmO5tylk">
 
 <span id="WebsiteTop">
     <h2>www.danecarstens.net</h2>
-    <h3>>>Django based portfolio site: Winter Quarter 2022</h3>
+    <h3>>Django based portfolio site: Winter Quarter 2022</h3>
 >>My personal website itself is a portfolio piece!
 <br />
 >>This project was an exercise in full stack development
@@ -173,49 +176,50 @@ src="https://www.youtube.com/embed/7CPJmO5tylk">
     >>The design was chosen to minimize clutter, and have only the information on screen that the reader needed
 <br />
 >>Every line of code was written by me, both front-end and backend
-
+    <br />
+<a href="#PortfolioTop" style="color: #00b5ff">Jump to top</a>
 </span>
 
 <p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
 
-<p style="font-size: 200%" id="TwinRiversTop">
-    ----------------------------
-    <br />
-    <u style="color: #00a800; font-size: 150%">Twin Rivers, Montana</u>
-    <br />
-    <button type="button" id="TwinRiversButton" onclick="collapseSection('TwinRivers', 'TwinRiversButton')">Collapse...</button>
-</p>
+
 <span id="TwinRivers">
+    <h2>Twin Rivers, Montana</h2>
+    <h3>>Solo Unity project: Summer-Fall 2020</h3>
 <p >
-    <u >Solo developed game - Fall 2020</u>
+    >My first large scale solo unity project
+    <br />>I designed the game, programmed it, and wrote the story
     <br />
-    <a href="https://danecarstens.itch.io/twin-rivers">itch.io</a> link to play in browser!
-    <br />
-    <br />
-    I programmed an extensive dialogue tree system, which took in JSON files and created branching paths.
-    <br />
-    The backend dialogue trees were written using <a href="https://yarnspinner.dev/">yarnspinner</a>, then that data was
-    fed into my custom Unity implementation.
+    <<a href="https://danecarstens.itch.io/twin-rivers">Play in browser!</a>>
     <br />
     <br />
+    >The dialogue system is an entirely custom implementation
+    <br />
+    >Branching dialogue trees were written in <a href="https://yarnspinner.dev/">yarnspinner</a>,
+    then the JSON files were parsed by my system
+    <br />
+    <br />>Some contextual lines needed previous game events to occur before the dialogue option appears
+    <br />>>That context could include finding clues, or other conversations
+    <br />>>This system allowed NPCs to respond directly to in-game events, increasing immersion and replayability
+    <br /><br />>In addition, important details from conversations are added to the player's journal
+    <br /><br />
     <iframe src="{% static 'images/TwinRiversVid01.mp4' %}" width="300" height="300"></iframe>
+    <iframe src="{% static 'images/TwinRiversConversations.mp4' %}" width="300" height="300"></iframe>
+    <br /><br />
+    >Another major system I built was the clues
     <br />
-    Other than speaking with witnesses, the primary way to gather evidence is to find clues around the crime scene.
+    >>Scattered throughout the map are interactable clues.
     <br />
-    This system integrated with my dialogue, and finding certain clues opens up hidden dialogue options.
+    >>After a clue is picked up, it is added to the player's journal
     <br />
-    The clue prefab itself was modular, and creating new ones was a simple drag and drop
+    >>Creating new clues was a simple drag and drop
     <br />
     <iframe src="{% static 'images/TwinRiversClueVid.mp4' %}" width="300" height="300"></iframe>
     <br />
-    To assist in their fact finding, the player had access to important information said during conversation,
-    as well as all their clues
-    <br />
-    There was also a map, which updated its position in real time as the player moved
-    <br />
-    <iframe src="{% static 'images/TwinRiversConversations.mp4' %}" width="300" height="300"></iframe>
-    <img src="{% static 'images/TwinRiversMap.png' %}" width="309" height="175"></img>
 
+    >I also created a map that tracked the player's location in real time
+    <br />
+    <img src="{% static 'images/TwinRiversMap.png' %}" width="309" height="175"></img>
 </p>
 
 
