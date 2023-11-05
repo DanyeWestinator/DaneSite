@@ -34,25 +34,25 @@
 </head>
 
 <body>
-<!-- Header -->
+    <!-- Header -->
     <h1>danecarstens.net</h1>
     <!-- <p style="font-size: 250%; color : #00ff00;
      font-family: Georgia">danecarstens.net</p>-->
 
-    <h2 style="text-decoration: none">Quick links:&emsp;
-    <<a href="Portfolio/Programming" style="color: #00b5ff">Programming Portfolio</a>>&emsp;
-    <<a href="https://docs.google.com/document/d/1ak_VIoFdbhMcze0uhsrp68PRJT6yXUL5rXlg8MFtvsk/edit?usp=sharing"
-    style="color: #00b5ff">Resume</a>>
+    <h2 style="text-decoration: none">
+        Quick links:&emsp;
+        <<a href="Portfolio/Programming" style="color: #00b5ff">Programming Portfolio</a>>&emsp;
+        <<a href="https://docs.google.com/document/d/1neyhmXG-YhMOfaV5SvsS9yjhWk9-l8cwgyPZyUa_F7Q/edit?usp=sharing"
+            style="color: #00b5ff">Resume</a>>
     </h2>
-<br />
+    <br />
     {% load static %}
-    <span id="DanePicture"></span>
     <br />
     <h2>
         Author, Game Designer, Nature Nerd
     </h2>
     <p>
-    >I recently graduated from UCI with a BS in Computer Game Science.
+        >I recently graduated from UCI with a BS in Computer Game Science.
         <br /><br />>I spend my days reading and writing SciFi/Fantasy,
         building indie games,
         ranting about why the US needs better public transit,
@@ -60,12 +60,13 @@
         <br /><br />>I am currently looking for employment, working in the games industry
         <br />
         <br />
-    <h2>Social links:</h2>
+        <h2>Social links:</h2>
         <<a href="https://www.instagram.com/danyewest/" style="color: #00b5ff">Instagram</a>>
         <br />
         <<a href="https://twitter.com/CarstensDane" style="color: #00b5ff">Twitter</a>>
     </p>
-</div>
+    <span id="DanePicture"></span>
+    </div>
     <br />
 
     <br />
@@ -75,48 +76,50 @@
     Season <span id="Season">2</span>, Episode <span id="Episode">5</span>: <span id="EpTitle">Landing at Point Rain</span>
     <br />
     <br />
-    <span id="CloneQoute", style="font-size: 150% ; color: #176B8E ; background-color: black"><b>Believe in yourself or no one else will.</b></span>
+    <span id="CloneQoute" , style="font-size: 150% ; color: #176B8E ; background-color: black"><b>Believe in yourself or no one else will.</b></span>
     <br />
     <br />
     <button type="button " onclick="changeQuote(-1)" style="color: #00b5ff;
-    background-color: black; border-color: white"><- Previous Quote</button>
+    background-color: black; border-color: white">
+        <- Previous Quote
+    </button>
     <button type="button " onclick="changeQuote(0, true)" style="color: #00b5ff;
-    background-color: black; border-color: white">??? Random Quote ???</button>
+    background-color: black; border-color: white">
+        ??? Random Quote ???
+    </button>
     <button type="button " onclick="changeQuote(1)" style="color: #00b5ff;
-    background-color: black; border-color: white">Next Quote -></button>
+    background-color: black; border-color: white">
+        Next Quote ->
+    </button>
 
 
 
-</div>
+    </div>
 
-<span style="font-size: 75%">
-    <br />
-    <br />
-    For any further inquries, please email me at <a href="mailto:danemcarstens@gmail.com" style="color: #00b5ff">danemcarstens@gmail.com</a>
-</span>
+    <span style="font-size: 75%">
+        <br />
+        <br />
+        For any further inquries, please email me at <a href="mailto:danemcarstens@gmail.com" style="color: #00b5ff">danemcarstens@gmail.com</a>
+    </span>
 
-<script>
+    <script>
         var clone = "CLONE"
         var cloneSplit = clone.split("|||")
         var currentQuoteNum = 26
         /*Changes which Clone Wars quote to display.
         Can either be random, or +- 1 */
-        function changeQuote(amount, random=false){
+        function changeQuote(amount, random = false) {
 
-            if (random == true)
-            {
+            if (random == true) {
                 var randomNum = Math.floor(Math.random() * (cloneSplit.length));
                 currentQuoteNum = randomNum;
             }
-            else
-            {
+            else {
                 currentQuoteNum += amount;
-                if (currentQuoteNum < 0)
-                {
+                if (currentQuoteNum < 0) {
                     currentQuoteNum = cloneSplit.length - 1;
                 }
-                else if (currentQuoteNum >= cloneSplit.length)
-                {
+                else if (currentQuoteNum >= cloneSplit.length) {
                     currentQuoteNum = 0;
                 }
             }
@@ -143,11 +146,10 @@
             "GooseChair.jpg-3264x1836",
             "Tram.jpg-5184x3456",
         ]
-        function randomPicture()
-        {
+        function randomPicture() {
             var i = Math.floor(Math.random() * (PictureURLS.length));
             var pictureSpan = document.getElementById("DanePicture");
-            var html = "<img src=\"{% static 'images/URL' %} \" width=\"WIDTH\" height=\"150\" />";
+            var html = "<img src=\"{% static 'images/URL' %} \" />";
             var url = PictureURLS[i]
             var dimensions = url.split("-")[1].split("x")
             var ratio = parseFloat(dimensions[0]) / parseFloat(dimensions[1])

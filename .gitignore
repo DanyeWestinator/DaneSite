@@ -2,3 +2,8 @@ Blogosphere/__pycache__/
 .idea/
 Blogosphere/migrations/__pycache__/
 DaneSite/__pycache__/
+*.vsidx
+.vs/DaneSite/v17/.wsuo
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
