@@ -47,6 +47,7 @@
     </h2>
     <br />
     {% load static %}
+    <span id="DanePicture"></span>
     <br />
     <h2>
         Author, Game Designer, Nature Nerd
@@ -149,7 +150,7 @@
         function randomPicture() {
             var i = Math.floor(Math.random() * (PictureURLS.length));
             var pictureSpan = document.getElementById("DanePicture");
-            var html = "<img src=\"{% static 'images/URL' %} \" />";
+            var html = "<img src=\"{% static 'images/URL' %} \" width=\"WIDTH\" height=\"150\" />";
             var url = PictureURLS[i]
             var dimensions = url.split("-")[1].split("x")
             var ratio = parseFloat(dimensions[0]) / parseFloat(dimensions[1])
