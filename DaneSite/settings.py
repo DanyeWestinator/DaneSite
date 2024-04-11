@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 from os.path import join
 
@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #Instead, I'm going to do poor-man's security
 #And write this lil note
 #If you're digging deep enough in the code to be reading this,
-#please don't hesitate to reach out!! \
+#please don't hesitate to reach out!! 
 #I'd love to hear from you
 #If you intend me harm, well all I can do is plead. This site is just my portfolio and personal site
 #Just leave it be!
@@ -131,6 +131,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+STATIC_ROOT = ''
 STATIC_URL = 'static/'
 
 # Default primary key field type

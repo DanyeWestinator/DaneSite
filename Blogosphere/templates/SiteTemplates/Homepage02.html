@@ -38,7 +38,10 @@
     <h1>danecarstens.net</h1>
     <!-- <p style="font-size: 250%; color : #00ff00;
      font-family: Georgia">danecarstens.net</p>-->
+    <h2 style="text-decoration: none">
+        Experienced Unity Generalist
 
+        </h2>
     <h2 style="text-decoration: none">
         Quick links:&emsp;
         <<a href="Portfolio/Programming" style="color: #00b5ff">Programming Portfolio</a>>&emsp;
@@ -46,8 +49,7 @@
             style="color: #00b5ff">Resume</a>>
     </h2>
     <br />
-    {% load static %}
-    <span id="DanePicture"></span>
+
     <br />
     <h2>
         Author, Game Designer, Nature Nerd
@@ -65,8 +67,11 @@
         <<a href="https://www.instagram.com/danyewest/" style="color: #00b5ff">Instagram</a>>
         <br />
         <<a href="https://twitter.com/CarstensDane" style="color: #00b5ff">Twitter</a>>
+        <br /><br />    
+        {% load static %}
+        <span id="DanePicture"></span>
     </p>
-    <span id="DanePicture"></span>
+    
     </div>
     <br />
 
@@ -137,26 +142,28 @@
 
         }
         changeQuote(0, true)
-
-        var PictureURLS = ["DaneTractor.jpg-3024x4032",
+        /*"DaneTractor.jpg-3024x4032",
             "LowerMonarch.jpg-3024x4032",
             "MugMountain.jpg-2640x1288",
             "SawtoothTop.jpg-2640x1288",
             "CityHall.jpg-2268x4032",
             "Vans.jpg-2268x4032",
             "GooseChair.jpg-3264x1836",
-            "Tram.jpg-5184x3456",
+            "Tram.jpg-5184x3456",*/
+        var PictureURLS = ["CityHall_cropped.png", "Vans.png",
         ]
         function randomPicture() {
             var i = Math.floor(Math.random() * (PictureURLS.length));
             var pictureSpan = document.getElementById("DanePicture");
-            var html = "<img src=\"{% static 'images/URL' %} \" width=\"WIDTH\" height=\"150\" />";
+            var html = "<img src=\"{% static 'images/URL' %} \"  />";
             var url = PictureURLS[i]
-            var dimensions = url.split("-")[1].split("x")
+            /*var dimensions = url.split("-")[1].split("x")
             var ratio = parseFloat(dimensions[0]) / parseFloat(dimensions[1])
             ratio = ratio * 300
             html = html.replace("URL", url.split("-")[0]);
             html = html.replace("WIDTH", ratio.toString())
+            */
+            html = html.replace("URL", url);
             pictureSpan.innerHTML = html;
         }
         randomPicture()
