@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{TYPE}} Portfolio</title>
     <style id="BodyStyle">
         body {
             background-color: black;
@@ -29,11 +28,16 @@
             font-size: 120%;
             font-style: italic;
         }
+        green {
+            color: #00ff00;
+        }
 
         a {
             color: #00b5ff
         }
     </style>
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/icon.ico">
 </head>
 <body>
     <h1 id="PortfolioTop">Programming Portfolio</h1>
@@ -52,15 +56,17 @@
         <h2>Jump to section:</h2>
 
         <br />
-        <a href="#Castle">Save the Castle!</a>
-        - A VR Tower defense, coming soon to Steam / Quest
+        ><a href="#Castle">Save the Castle!</a>
+        - A <green>VR Tower defense</green>, coming soon to <green>Steam / Quest</green>
         <br />
-        <a href="#Commonhood">Common'Hood</a>
-        - An indie crafting game, now available on steam
         <br />
-
-
-        <a href="http://www.danecarstens.net">Return to home</a>
+        ><a href="#Commonhood">Common'Hood</a>
+        - A <green>narrative-driven crafting game</green>, now available on <green>Steam / Gamepass</green>
+        <br />
+        <br />
+        ><a href="#Education">Education</a> - <green>UC Irvine</green>, class of <green>2023</green>. Zot Zot Zot!
+        <br /><br />
+        ><a href="http://www.danecarstens.net">Return to home</a>
     </p>
     <p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
     <br />
@@ -71,10 +77,42 @@
         <h3>Unity VR Developer: June 2023 - Present</h3>
         <<a href="https://www.savethecastle.net">Steam</a>>
         <br />
+        <p>
+            <green>Save the Castle!</green> is an innovative new tower defense that places you on the field of battle,
+            in a level of immersion only VR can provide
+        </p>
+        <p>You can take over <i><green>any</green></i> tower on the battlefield, and turn the tide of the war</p>
         <br />
+        <img src="{% static 'images/takeover.gif' %} " height="300" />
+        <br />
+        <p>
+            With a team of only two, I've had to wear many hats during development.
+            <br /><br />&emsp;>Some features I've built include (but are not limited to!):
+            <ul>
+                <li>
+                    <green>Enemy state machine</green>, 
+                    including <green>ragdolls</green>, 
+                    <green>animation state machine</green>, and 
+                    <green>combat logic</green>
+                </li>
+                <li>
+                    <green>Editor tools</green>, including the <green>terrain / prop generation</green>,
+                    <green>path placement</green>, and a <green>wave creation wizard</green>, to easily balance each level
+                </li>
+                <li>
+                    Custom VR logic, including an <green>automatic teleport floor placer</green>, always keeping player comfort in mind
+                </li>
+
+            </ul>
+
+        </p>
+
         <img src="{% static 'images/missile_gatling02.gif' %} " height="300" />
+        <p>This game turned out more fun than I could have possibly imagined. <green>Try it today!</green></p>
+        <br />
     </span>
     <p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
+    <br />
 
 
     <span>
