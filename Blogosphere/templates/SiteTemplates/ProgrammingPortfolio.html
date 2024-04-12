@@ -3,232 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <title>{{TYPE}} Portfolio</title>
-    <style id = "BodyStyle">
-        body
-        {
+    <style id="BodyStyle">
+        body {
             background-color: black;
             color: #00a800;
-            overflow-x:hidden;
+            overflow-x: hidden;
             max-width: 100%;
             overflow-y: scroll;
+            zoom: 125%;
         }
-        h1
-        {
+
+        h1 {
             color: #00ff00;
             font-size: 300%;
         }
-        h2
-        {
-          color: #00ff00;
-        font-size: 175%;
+
+        h2 {
+            color: #00ff00;
+            font-size: 175%;
             text-decoration: underline;
         }
-        h3{
-            color : #00ff00;
+
+        h3 {
+            color: #0fb084;
             font-size: 120%;
             font-style: italic;
         }
-        a{
+
+        a {
             color: #00b5ff
         }
-
     </style>
 </head>
 <body>
-<h1 id="PortfolioTop">Programming Portfolio</h1>
-<p>
-    {% load static %}
-    <img src="{% static 'images/unity_logo.png' %} " width="125" height="100" />
-    <img src="{% static 'images/cs_logo.png' %} " width="100" height="100" />
-    <img src="{% static 'images/python_logo.png' %} " width="75" height="75" />
-    <img src="{% static 'images/django_logo.png' %} " width="75" height="60" />
+    <h1 id="PortfolioTop">Programming Portfolio</h1>
+    <p>
+        {% load static %}
 
-    <br />
-</p>
-<h2>Education:</h2>
->>I graduated from UCI in June 2023, with a BS in Computer Game Science and an emphasis on databases
-<br />
->>From day one, I was building games hands on with the Video Game Development Club, where I later served as a writing officer
-<br />
->>My courseload covered a broad array of computer science topics,
-from networking to algorithm analysis to UI/UX design
-<br />
->>Many classes were project based, building real world systems
-<br />
->>I built AWS hosted web servers to practice SQL skills, along with countless games in Unity
-<p>
-    <h2>Jump to section:</h2>
-<br />
-    <a href="#Commonhood">Common'Hood</a>
-- An indie crafting game, now available on steam
-    <br />
-<a href="#SpaceRunnersTop">SpaceRunners!</a>
-- Senior thesis infinite running game
-    <br />
+        <img src="{% static 'images/unity_logo.png' %} " height="150" />
+        <img src="{% static 'images/cs_logo.png' %} " height="150" />
+        <img src="{% static 'images/unreal_logo.png' %} " height="150" />
 
-<a href="#WebsiteTop">www.danecarstens.net</a> - A django website
-<br />
 
-<a href="#TwinRivers">Twin Rivers, Montana</a> - A solo Unity murder mystery game
-    <br />
+        <br />
+    </p>
 
-<a href="http://www.danecarstens.net">Return to home</a>
-</p>
+    <p>
+        <h2>Jump to section:</h2>
+
+        <br />
+        <a href="#Castle">Save the Castle!</a>
+        - A VR Tower defense, coming soon to Steam / Quest
+        <br />
+        <a href="#Commonhood">Common'Hood</a>
+        - An indie crafting game, now available on steam
+        <br />
+
+
+        <a href="http://www.danecarstens.net">Return to home</a>
+    </p>
     <p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
     <br />
 
     <br />
-
-<span>
-    <h2 id="Commonhood">Common'Hood</h2>
-    <h3>>Unity developer: June - October 2021, July - October 2022</h3>
-
->As a developer, my tasks included:<br />
-    >>Building and implementing a multiplayer sandbox mode<br />
-    >>>Using the Mirror library for Unity, we ported all singe-player building features to a creative sandbox level,
-    enabling friends to build and collaborate together
-    <br /><br />
-
-    >>Creating a localization system<br />
-    >>>All text, from dialogue to item flavor, had to be scraped and added to a spreadsheet<br />
-    >>>Each line included the source of the text and a column for each language, including English<br />
-    >>>Once the CSV spreadsheet was translated, the correct language was displayed to the player<br /><br />
-
-    >>Building and maintaining QoL features<br />
-    >>>One feature automatically swapped to the next ingredient when constructing blueprints<br />
-    >>>A developer tool I built displayed all 3d models, sorted by vertex count.
-    This massively increased performance after several problem areas were identified<br />
-    >>>On top of all my other tasks, we regularly cleared out the public buglist,
-    fixing everything from pathfinding hiccups to texture glitches
-    <br /><br />
+    <span>
+        <h2 id="#Castle">Save the Castle!</h2>
+        <h3>Unity VR Developer: June 2023 - Present</h3>
+        <<a href="https://www.savethecastle.net">Steam</a>>
+        <br />
+        <br />
+        <img src="{% static 'images/missile_gatling02.gif' %} " height="300" />
+    </span>
+    <p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
 
 
->From their steam page: <br />
-    >>"Common’hood is a community building and economy management game with
-    highly customizable base building tools. Scavenge for materials, grow your own food,
-    research new technology, craft new tools, build a home, make friends.
-    Form your community and take it from surviving to thriving!"
-<p>
-    <<a href="https://store.steampowered.com/app/962090/Commonhood/">Steam link</a>>
-    <br />
-    <<a href="https://www.common-hood.com/">Website link</a>>
-</p>
-<p>
-<iframe width="420" height="315"
-src="https://www.youtube.com/embed/7CPJmO5tylk", allow="fullscreen">
-</iframe></p>
-<a href="#PortfolioTop">Jump to top</a>
-</span>
+    <span>
 
-<p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
+        <h2 id="Commonhood">Common'Hood</h2>
+        <h3>>Unity developer: June 2021 - October 2023</h3>
 
-<div id="SpaceRunnersTop">
-    <h2>SpaceRunners!</h2>
-    <h3>>Senior thesis project: Spring Quarter 2022</h3>
+        >As a developer, my tasks included:<br />
+        >>Building and implementing a multiplayer sandbox mode<br />
+        >>>Using the Mirror library for Unity, we ported all singe-player building features to a creative sandbox level,
+        enabling friends to build and collaborate together
+        <br /><br />
 
-    >>My senior thesis was a solo project in Godot, creating an android infinite runner<br />
-    >>Everything, from programming to art, was done by me<br />
-    <br />
-    <<a href="https://drive.google.com/drive/folders/1mXzZsK1MvOIKCLFup6I_QwO0RVKjjsFe?usp=sharing"
->Playable builds</a>>
-    <br />
-    <br />
-    >>Godot was chosen for two reasons:
-    <br />
-    >>>I agree with their open-source licensing on a moral level. Code is meant to be shared and improved by
-    the entire community
-    <br />
-    >>>I wanted to train my adaptability, and learn a new system in a hands-on project.
-    I had only ever used Unity until this point, and I wanted to experiment with a new language and engine
-    <br />
-    <iframe src="{% static 'images/SpaceRunners01.mp4' %}" width="180" height="400"></iframe><br />
-    >>Systems I designed and built include:
-    <br />
-    >>>Turbo Boost, allowing the player to temporarily smash through asteroids and enemy Vipers
-    <br />
-    >>>Asteroids that destroy players, and explode on contact with lazers
-    <br />
-    >>>Lazers, to destroy foes and rocks
-    <br />
-    >>>Enemy ships, along with their AI
-    <br />
-    >>>Stat tracking, including kills, distance travelled,
-    and number of times you bait an enemy into destroying an asteroid
-    <br /><br /><br />
-    >>One major advantage of creating a mobile game was it was much easier to find playtesters.
-    <br />
-    >>>I could hand over my phone, and get instant feedback
-    <br />
-    >>>This constant iteration made the game much more successful
-    <br />
-<a href="#PortfolioTop">Jump to top</a>
-</div>
+        >>Creating a localization system<br />
+        >>>All text, from dialogue to item flavor, had to be scraped and added to a spreadsheet<br />
+        >>>Each line included the source of the text and a column for each language, including English<br />
+        >>>Once the CSV spreadsheet was translated, the correct language was displayed to the player<br /><br />
 
-<p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
-
-<span id="WebsiteTop">
-    <h2>www.danecarstens.net</h2>
-    <h3>>Django based portfolio site: Winter Quarter 2022</h3>
->>My personal website itself is a portfolio piece!
-<br />
->>This project was an exercise in full stack development
-<br />
-    >>The website was designed to be fast, lightweight, and portable across devices
-<br />
-    >>The design was chosen to minimize clutter, and have only the information on screen that the reader needed
-<br />
->>Every line of code was written by me, both front-end and backend
-    <br />
-<a href="#PortfolioTop">Jump to top</a>
-</span>
-
-<p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
+        >>Building and maintaining QoL features<br />
+        >>>One feature automatically swapped to the next ingredient when constructing blueprints<br />
+        >>>A developer tool I built displayed all 3d models, sorted by vertex count.
+        This massively increased performance after several problem areas were identified<br />
+        >>>On top of all my other tasks, we regularly cleared out the public buglist,
+        fixing everything from pathfinding hiccups to texture glitches
+        <br /><br />
 
 
-<span id="TwinRivers">
-    <h2>Twin Rivers, Montana</h2>
-    <h3>>Solo Unity project: Summer-Fall 2020</h3>
-<p >
-    >My first large scale solo unity project
-    <br />>I designed the game, programmed it, and wrote the story
-    <br />
-    <<a href="https://danecarstens.itch.io/twin-rivers">Play in browser!</a>>
-    <br />
-    <br />
-    >The dialogue system is an entirely custom implementation
-    <br />
-    >Branching dialogue trees were written in <a href="https://yarnspinner.dev/">yarnspinner</a>,
-    then the JSON files were parsed by my system
-    <br />
-    <br />>Some contextual lines needed previous game events to occur before the dialogue option appears
-    <br />>>That context could include finding clues, or other conversations
-    <br />>>This system allowed NPCs to respond directly to in-game events, increasing immersion and replayability
-    <br /><br />>In addition, important details from conversations are added to the player's journal
-    <br /><br />
-    <iframe src="{% static 'images/TwinRiversVid01.mp4' %}" width="300" height="300"></iframe>
-    <iframe src="{% static 'images/TwinRiversConversations.mp4' %}" width="300" height="300"></iframe>
-    <br /><br />
-    >Another major system I built was the clues
-    <br />
-    >>Scattered throughout the map are interactable clues.
-    <br />
-    >>After a clue is picked up, it is added to the player's journal
-    <br />
-    >>Creating new clues was a simple drag and drop
-    <br />
-    <iframe src="{% static 'images/TwinRiversClueVid.mp4' %}" width="300" height="300"></iframe>
-    <br />
+        >From their steam page: <br />
+        >>"Common’hood is a community building and economy management game with
+        highly customizable base building tools. Scavenge for materials, grow your own food,
+        research new technology, craft new tools, build a home, make friends.
+        Form your community and take it from surviving to thriving!"
+        <p>
+            <<a href="https://store.steampowered.com/app/962090/Commonhood/">Steam link</a>>
+            <br />
+            <<a href="https://www.common-hood.com/">Website link</a>>
+        </p>
+        <p>
+            <iframe width="420" height="315"
+                    src="https://www.youtube.com/embed/7CPJmO5tylk" , allow="fullscreen">
+            </iframe>
+        </p>
+        <a href="#PortfolioTop">Jump to top</a>
+    </span>
 
-    >I also created a map that tracked the player's location in real time
-    <br />
-    <img src="{% static 'images/TwinRiversMap.png' %}" width="309" height="175"></img>
-    <br />
-    <a href="#PortfolioTop">Jump to top</a>
-</p>
+    <p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
 
 
 
-</span>
+    <h2 id="#Education">Education:</h2>
+    >>I graduated from UCI in June 2023 with a 3.4 GPA, with a BS in Computer Game Science and an emphasis on databases
+    <br />
+    >>From day one, I was building games hands on with the Video Game Development Club, where I later served as a writing officer
+    <br />
+    >>My courseload covered a broad array of computer science topics,
+    from networking to algorithm analysis to UI/UX design
+    <br />
+    >>Many classes were project based, building real world systems
+    <br />
+    >>I built AWS hosted web servers to practice SQL skills, along with countless games in Unity
+
+    </span>
 
 </body>
 </html>
+
+<!--COLLEGE PROJECTS
+     <span id="#College"></span>
+
+ <div id="SpaceRunnersTop">
+     <h2>SpaceRunners!</h2>
+     <h3>>Senior thesis project: Spring Quarter 2022</h3>
+
+     >>My senior thesis was a solo project in Godot, creating an android infinite runner<br />
+     >>Everything, from programming to art, was done by me<br />
+     <br />
+     <<a href="https://drive.google.com/drive/folders/1mXzZsK1MvOIKCLFup6I_QwO0RVKjjsFe?usp=sharing">Playable builds</a>>
+     <br />
+     <br />
+     >>Godot was chosen for two reasons:
+     <br />
+     >>>I agree with their open-source licensing on a moral level. Code is meant to be shared and improved by
+     the entire community
+     <br />
+     >>>I wanted to train my adaptability, and learn a new system in a hands-on project.
+     I had only ever used Unity until this point, and I wanted to experiment with a new language and engine
+     <br />
+     <iframe src="{% static 'images/SpaceRunners01.mp4' %}" width="180" height="400"></iframe><br />
+     >>Systems I designed and built include:
+     <br />
+     >>>Turbo Boost, allowing the player to temporarily smash through asteroids and enemy Vipers
+     <br />
+     >>>Asteroids that destroy players, and explode on contact with lazers
+     <br />
+     >>>Lazers, to destroy foes and rocks
+     <br />
+     >>>Enemy ships, along with their AI
+     <br />
+     >>>Stat tracking, including kills, distance travelled,
+     and number of times you bait an enemy into destroying an asteroid
+     <br /><br /><br />
+     >>One major advantage of creating a mobile game was it was much easier to find playtesters.
+     <br />
+     >>>I could hand over my phone, and get instant feedback
+     <br />
+     >>>This constant iteration made the game much more successful
+     <br />
+     <a href="#PortfolioTop">Jump to top</a>
+ </div>
+
+ <p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
+
+ <span id="WebsiteTop">
+     <h2>www.danecarstens.net</h2>
+     <h3>>Django based portfolio site: Winter Quarter 2022</h3>
+     >>My personal website itself is a portfolio piece!
+     <br />
+     >>This project was an exercise in full stack development
+     <br />
+     >>The website was designed to be fast, lightweight, and portable across devices
+     <br />
+     >>The design was chosen to minimize clutter, and have only the information on screen that the reader needed
+     <br />
+     >>Every line of code was written by me, both front-end and backend
+     <br />
+     <a href="#PortfolioTop">Jump to top</a>
+ </span>
+
+ <p style="text-align: center; color: #00ff00">*&emsp;*&emsp;*</p>
+
+
+ <span id="TwinRivers">
+     <h2>Twin Rivers, Montana</h2>
+     <h3>>Solo Unity project: Summer-Fall 2020</h3>
+     <p>
+         >My first large scale solo unity project
+         <br />>I designed the game, programmed it, and wrote the story
+         <br />
+         <<a href="https://danecarstens.itch.io/twin-rivers">Play in browser!</a>>
+         <br />
+         <br />
+         >The dialogue system is an entirely custom implementation
+         <br />
+         >Branching dialogue trees were written in <a href="https://yarnspinner.dev/">yarnspinner</a>,
+         then the JSON files were parsed by my system
+         <br />
+         <br />>Some contextual lines needed previous game events to occur before the dialogue option appears
+         <br />>>That context could include finding clues, or other conversations
+         <br />>>This system allowed NPCs to respond directly to in-game events, increasing immersion and replayability
+         <br /><br />>In addition, important details from conversations are added to the player's journal
+         <br /><br />
+         <iframe src="{% static 'images/TwinRiversVid01.mp4' %}" width="300" height="300"></iframe>
+         <iframe src="{% static 'images/TwinRiversConversations.mp4' %}" width="300" height="300"></iframe>
+         <br /><br />
+         >Another major system I built was the clues
+         <br />
+         >>Scattered throughout the map are interactable clues.
+         <br />
+         >>After a clue is picked up, it is added to the player's journal
+         <br />
+         >>Creating new clues was a simple drag and drop
+         <br />
+         <iframe src="{% static 'images/TwinRiversClueVid.mp4' %}" width="300" height="300"></iframe>
+         <br />
+
+         >I also created a map that tracked the player's location in real time
+         <br />
+         <img src="{% static 'images/TwinRiversMap.png' %}" width="309" height="175"></img>
+         <br />
+         <a href="#PortfolioTop">Jump to top</a>
+     </p>
+
+
+
+    -->
